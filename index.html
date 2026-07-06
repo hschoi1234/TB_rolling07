@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링파스타 이용 안내</title>
+    <style>
+        /* 기본 레이아웃 초기화 */
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; display: flex; justify-content: center; background-color: #f4f4f4; font-family: sans-serif; }
+        
+        .popup-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* PC 최대 너비 */
+            background-image: url('./sktTday_06udon.png'); 
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            aspect-ratio: 800 / 1050; /* 이미지의 원본 비율 유지 */
+        }
+
+        .content-text {
+            position: absolute;
+            left: 8%;  /* 좌우 여백을 조금 더 여유있게 조정 */
+            right: 8%;
+            color: #333;
+            font-weight: 800; /* 강조를 위해 두께 상향 */
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            text-align: center;
+            white-space: pre-line; 
+            word-break: keep-all; /* 단어 단위 줄바꿈으로 가독성 향상 */
+            line-height: 1.3;
+        }
+
+/* 1. 이용가능매장: 가장 큰 제목 느낌 */
+        .box-1 { 
+            top: 19.5%; 
+            height: 7%; 
+            font-size: 18px; /* 3.5vw -> 18px로 고정 (모바일 기준) */
+        }
+
+/* 2. 사용불가매장 영역 수정 */
+.box-2 { 
+    top: 33%;           
+    height: 38%;        
+    font-size: 3vw;     /* 고정 px 대신 화면 너비에 비례하도록 수정 */
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    padding-top: 0;         
+    line-height: 1.2;   /* 행간을 살짝 넓혀 가독성 확보 */    
+}
+
+        /* PC 버전에서도 위치가 어긋나지 않게 조정 */
+        @media (min-width: 800px) {
+            .box-2 { 
+                top: 33% !important; 
+                font-size: 21px !important; 
+            }
+        }
+
+        /* 3. 포장/배달 전문매장 */
+        .box-3 { 
+            top: 78.5%; 
+            height: 16%; 
+            font-size: 14px; /* 2.8vw -> 14px로 고정 (모바일 기준) */
+        }
+
+        /* 💻 PC 환경 (800px 이상) 화면 대응 */
+        @media (min-width: 800px) {
+            .box-1 { font-size: 28px !important; }
+            .box-2 { font-size: 22px !important; }
+            .box-3 { font-size: 22px !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="popup-container">
+    <div class="content-text box-1">전국 롤링파스타 매장 (일부 매장 제외)</div>
+    
+    <div class="content-text box-2">
+        서울 : 강남터미널점, 강변역점<br>
+        경기 : 과천렛츠런파크점<br>
+        충청 : 모다천안아산점<br>
+        대전 : 한화생명볼파크점, 대전카이스트점<br>
+        경북 : 포항해병대1사단점<br>
+        대구 : 대구라이언즈파크<br>
+    </div>
+</div>
+
+</body>
+</html>
