@@ -43,23 +43,23 @@
 
 /* 2. 사용불가매장 영역 수정 */
 .box-2 { 
-    top: 33%;           
+    top: 37.5%;          /* 33% -> 37.5%로 수정하여 아래로 이동 */
     height: 38%;        
-    font-size: 3vw;     /* 고정 px 대신 화면 너비에 비례하도록 수정 */
+    font-size: 3vw;     
     display: flex;
     align-items: center;    
     justify-content: center; 
     padding-top: 0;         
-    line-height: 1.2;   /* 행간을 살짝 넓혀 가독성 확보 */    
+    line-height: 1.35;   /* 행간을 약간 늘려 회색 박스 세로 비율에 맞춤 */
 }
 
-        /* PC 버전에서도 위치가 어긋나지 않게 조정 */
-        @media (min-width: 800px) {
-            .box-2 { 
-                top: 33% !important; 
-                font-size: 21px !important; 
-            }
-        }
+/* 💻 PC 환경 (800px 이상) */
+@media (min-width: 800px) {
+    .box-2 { 
+        top: 37.5% !important;  /* PC에서도 마찬가지로 위치 조정 */
+        font-size: 21px !important; 
+    }
+}
 
         /* 3. 포장/배달 전문매장 */
         .box-3 { 
